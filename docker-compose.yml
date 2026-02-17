@@ -1,0 +1,10 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "8083:80"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
